@@ -85,11 +85,11 @@ with st.sidebar:
 
     ocr_engine = st.selectbox(
         "OCR エンジン",
-        options=[OCREngine.CLOUD_VISION, OCREngine.TESSERACT],
+        options=[OCREngine.TESSERACT, OCREngine.CLOUD_VISION],
         format_func=lambda x: (
-            "Google Cloud Vision（高精度・推奨）"
-            if x == OCREngine.CLOUD_VISION
-            else "Tesseract（ローカル・無料）"
+            "Tesseract（無料・推奨）"
+            if x == OCREngine.TESSERACT
+            else "Google Cloud Vision（高精度・要追加設定）"
         ),
     )
 
